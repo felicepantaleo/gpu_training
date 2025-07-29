@@ -1,3 +1,3 @@
 
 all:
-	nvcc --extented-lambda stencil.cu stencil
+	nvcc --std=c++20 --extended-lambda -gencode arch=compute_75,code=sm_75 stencil.cu stencil.out
